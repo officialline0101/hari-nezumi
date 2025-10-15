@@ -957,7 +957,7 @@
         <div id="treatment-text" style="display: none; margin-bottom: 10px;"></div>
 
 <!-- ② HTML：各ブロックの「日付入力」をラップして“日付を選択”を重ねる -->
-<div class="labelkibounitizi">希望日時<span class="required">必須</span></div>
+<div class="labelkibounitizi" id="kibou1">希望日時<span class="required">必須</span></div>
 <div class="info-text">※祝日は営業しておりません。</div>
 <div class="datetime-wrapper" style="text-align: center;">
   <span class="placeholder" id="placeholder1">⇩タップして日時を入力⇩</span>
@@ -971,7 +971,7 @@
 </div>
 
 <!-- 第二希望日時 -->
-<div class="labelkibounitizi">第二希望日時<span class="required">必須</span></div>
+<div class="labelkibounitizi" id="kibou1">第二希望日時<span class="required">必須</span></div>
 <div class="datetime-wrapper" style="text-align: center;">
   <span class="placeholder" id="placeholder2">⇩タップして日時を入力⇩</span>
   <input type="hidden" id="date2" name="date2">
@@ -982,7 +982,7 @@
 </div>
 
 <!-- 第三希望日時 -->
-<div class="labelkibounitizi">第三希望日時<span class="required">必須</span></div>
+<div class="labelkibounitizi" id="kibou1">第三希望日時<span class="required">必須</span></div>
 <div class="datetime-wrapper" style="text-align: center;">
   <span class="placeholder" id="placeholder3">⇩タップして日時を入力⇩</span>
   <input type="hidden" id="date3" name="date3">
@@ -1200,17 +1200,17 @@ function formatDateTime(dateTimeString) {
         <hr>
         <div class="info-row">
             <p>${selectedDate1Text}</p>
-            <button class="edit-button" onclick="scrollToElement('date1')">修正</button>
+            <button class="edit-button" onclick="scrollToElement('date1'); scrollToElement('kibou1')">修正</button>
         </div>
         <hr>
         <div class="info-row">
             <p>${selectedDate2Text}</p>
-            <button class="edit-button" onclick="scrollToElement('date2')">修正</button>
+            <button class="edit-button" onclick="scrollToElement('date2'); scrollToElement('kibou2')">修正</button>
         </div>
         <hr>
         <div class="info-row">
             <p>${selectedDate3Text}</p>
-            <button class="edit-button" onclick="scrollToElement('date3')">修正</button>
+            <button class="edit-button" onclick="scrollToElement('date3'); scrollToElement('kibou3')">修正</button>
         </div>
         <hr>
     `;
